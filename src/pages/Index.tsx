@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import heroVenue from "@/assets/hero-venue.jpg";
-import weddingCeremony from "@/assets/wedding-ceremony.jpg";
+import weddingHome from "@/assets/wedding_home.jpg";
 import golfAerial from "@/assets/golf-aerial.jpg";
-import eventsBallroom from "@/assets/events-ballroom.jpg";
+import eventHome from "@/assets/event_home.jpg";
 import couplePortrait from "@/assets/couple-portrait.jpg";
 import weddingDetails from "@/assets/wedding-details.jpg";
+import homeGallery from "@/assets/home_gallery.jpg";
+import homeGallery1 from "@/assets/home_gallery1.jpg";
+import homeGallery2 from "@/assets/home_gallery2.jpg";
+import homeGallery3 from "@/assets/home_gallery3.jpg";
+import homeGallery4 from "@/assets/home_gallery4.jpg";
+import homegallery from "@/assets/homegallery.jpg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 40 },
@@ -16,9 +22,21 @@ const fadeIn = {
 };
 
 const testimonials = [
-  { quote: "Valle Vista made our wedding day absolutely magical. Every detail was perfection.", author: "Sarah & Michael" },
-  { quote: "The most stunning venue we've ever seen. Our guests are still talking about it.", author: "Jessica & David" },
-  { quote: "From the moment we arrived, we knew this was the place for our celebration.", author: "Emily & James" },
+  {
+    quote:
+      "Valle Vista made our wedding day absolutely magical. Every detail was perfection.",
+    author: "Sarah & Michael",
+  },
+  {
+    quote:
+      "The most stunning venue we've ever seen. Our guests are still talking about it.",
+    author: "Jessica & David",
+  },
+  {
+    quote:
+      "From the moment we arrived, we knew this was the place for our celebration.",
+    author: "Emily & James",
+  },
 ];
 
 export default function Index() {
@@ -26,7 +44,11 @@ export default function Index() {
     <>
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src={heroVenue} alt="Valle Vista venue at sunset" className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src={heroVenue}
+          alt="Valle Vista venue at sunset"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="hero-overlay absolute inset-0" />
         <div className="relative text-center text-primary-foreground px-6">
           <motion.p
@@ -85,15 +107,19 @@ export default function Index() {
       <section className="section-padding">
         <div className="container-editorial">
           <motion.div {...fadeIn} className="max-w-3xl mx-auto text-center">
-            <p className="text-editorial text-lg text-primary mb-3">A legacy of elegance</p>
+            <p className="text-editorial text-lg text-primary mb-3">
+              A legacy of elegance
+            </p>
             <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground mb-6">
               Decades of Unforgettable Celebrations
             </h2>
             <div className="gold-divider mx-auto mb-8" />
             <p className="text-muted-foreground text-lg leading-relaxed font-sans">
-              For generations, Valle Vista has been the premier destination for life's most cherished moments.
-              Nestled among rolling green landscapes, our estate offers a timeless backdrop where sophistication
-              meets natural beauty — creating experiences that linger in the heart long after the last dance.
+              For generations, Valle Vista has been the premier destination for
+              life's most cherished moments. Nestled among rolling green
+              landscapes, our estate offers a timeless backdrop where
+              sophistication meets natural beauty — creating experiences that
+              linger in the heart long after the last dance.
             </p>
           </motion.div>
         </div>
@@ -105,23 +131,29 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div {...fadeIn}>
               <img
-                src={weddingCeremony}
+                src={weddingHome}
                 alt="Romantic outdoor wedding ceremony"
                 className="w-full aspect-[4/3] object-cover"
               />
             </motion.div>
             <motion.div {...fadeIn} className="lg:pl-4">
-              <p className="text-editorial text-lg text-primary mb-3">Your perfect day awaits</p>
-              <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground mb-6">Weddings</h2>
+              <p className="text-editorial text-lg text-primary mb-3">
+                Your perfect day awaits
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground mb-6">
+                Weddings
+              </h2>
               <div className="gold-divider mb-8" />
               <p className="text-muted-foreground leading-relaxed font-sans mb-4">
-                From intimate garden ceremonies to grand ballroom receptions, Valle Vista offers a range
-                of stunning settings for your celebration. Our dedicated team handles every detail, ensuring
+                From intimate garden ceremonies to grand ballroom receptions,
+                Valle Vista offers a range of stunning settings for your
+                celebration. Our dedicated team handles every detail, ensuring
                 your day is as effortless as it is extraordinary.
               </p>
               <p className="text-muted-foreground leading-relaxed font-sans mb-8">
-                All-inclusive packages from $3,500 to $10,000, featuring gourmet chef-prepared meals,
-                personalized planning, and the breathtaking Veranda on the Green.
+                All-inclusive packages from $3,500 to $10,000, featuring gourmet
+                chef-prepared meals, personalized planning, and the breathtaking
+                Veranda on the Green.
               </p>
               <Link
                 to="/weddings"
@@ -146,17 +178,22 @@ export default function Index() {
               />
             </motion.div>
             <motion.div {...fadeIn} className="lg:order-1 lg:pr-4">
-              <p className="text-editorial text-lg text-primary mb-3">A championship experience</p>
-              <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground mb-6">Golf</h2>
+              <p className="text-editorial text-lg text-primary mb-3">
+                A championship experience
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground mb-6">
+                Golf
+              </h2>
               <div className="gold-divider mb-8" />
               <p className="text-muted-foreground leading-relaxed font-sans mb-4">
-                Challenge yourself on our meticulously maintained course, where every hole offers a unique
-                blend of strategy and natural beauty. From leagues to outings, Valle Vista delivers an
-                exceptional golfing experience.
+                Challenge yourself on our meticulously maintained course, where
+                every hole offers a unique blend of strategy and natural beauty.
+                From leagues to outings, Valle Vista delivers an exceptional
+                golfing experience.
               </p>
               <p className="text-muted-foreground leading-relaxed font-sans mb-8">
-                Men's and Ladies' clubs, seasonal leagues, corporate outings, and flexible tee times
-                available throughout the season.
+                Men's and Ladies' clubs, seasonal leagues, corporate outings,
+                and flexible tee times available throughout the season.
               </p>
               <Link
                 to="/golf"
@@ -171,7 +208,11 @@ export default function Index() {
 
       {/* Events Feature */}
       <section className="relative section-padding overflow-hidden">
-        <img src={eventsBallroom} alt="Elegant ballroom setup" className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src={eventHome}
+          alt="Elegant ballroom setup"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="hero-overlay absolute inset-0" />
         <div className="relative container-editorial text-center text-primary-foreground">
           <SectionHeading
@@ -194,7 +235,14 @@ export default function Index() {
         <div className="container-editorial">
           <SectionHeading editorial="Captured moments" title="Gallery" />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-            {[heroVenue, weddingCeremony, couplePortrait, golfAerial, eventsBallroom, weddingDetails].map((img, i) => (
+            {[
+              homeGallery,
+              homeGallery1,
+              homeGallery2,
+              homeGallery3,
+              homeGallery4,
+              homegallery,
+            ].map((img, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -261,14 +309,17 @@ export default function Index() {
       <section className="section-padding">
         <div className="container-editorial text-center max-w-3xl mx-auto">
           <motion.div {...fadeIn}>
-            <p className="text-editorial text-lg text-primary mb-3">Begin your journey</p>
+            <p className="text-editorial text-lg text-primary mb-3">
+              Begin your journey
+            </p>
             <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground mb-6">
               Let's Create Something Beautiful
             </h2>
             <div className="gold-divider mx-auto mb-8" />
             <p className="text-muted-foreground text-lg leading-relaxed font-sans mb-10">
-              Whether you're envisioning an intimate garden ceremony, a grand ballroom celebration,
-              or a memorable day on the green — we'd love to hear from you.
+              Whether you're envisioning an intimate garden ceremony, a grand
+              ballroom celebration, or a memorable day on the green — we'd love
+              to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

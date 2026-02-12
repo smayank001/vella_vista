@@ -1,40 +1,45 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageHero from "@/components/layout/PageHero";
-import couplePortrait from "@/assets/couple-portrait.jpg";
-import weddingCeremony from "@/assets/wedding-ceremony.jpg";
-import weddingDetails from "@/assets/wedding-details.jpg";
-import eventsBallroom from "@/assets/events-ballroom.jpg";
-import heroVenue from "@/assets/hero-venue.jpg";
-import golfAerial from "@/assets/golf-aerial.jpg";
+import wedding from "@/assets/wedding.jpg";
+import wedding1 from "@/assets/wedding1.jpg";
+import wedding2 from "@/assets/wedding2.jpg";
+import wedding3 from "@/assets/wedding3.jpg";
+import wedding4 from "@/assets/wedding4.jpg";
+import wedding5 from "@/assets/wedding5.jpg";
 
 const categories = ["All", "Ceremonies", "Receptions", "Details", "Grounds"];
 
 const images = [
-  { src: weddingCeremony, category: "Ceremonies", alt: "Outdoor ceremony" },
-  { src: weddingDetails, category: "Details", alt: "Table details" },
-  { src: couplePortrait, category: "Ceremonies", alt: "Couple portrait" },
-  { src: eventsBallroom, category: "Receptions", alt: "Ballroom reception" },
-  { src: heroVenue, category: "Grounds", alt: "Venue exterior" },
-  { src: golfAerial, category: "Grounds", alt: "Aerial view" },
-  { src: weddingCeremony, category: "Ceremonies", alt: "Garden ceremony" },
-  { src: weddingDetails, category: "Details", alt: "Floral arrangement" },
-  { src: eventsBallroom, category: "Receptions", alt: "Grand ballroom" },
+  { src: wedding, category: "Ceremonies", alt: "Wedding ceremony" },
+  { src: wedding1, category: "Receptions", alt: "Wedding reception" },
+  { src: wedding2, category: "Details", alt: "Wedding details" },
+  { src: wedding3, category: "Ceremonies", alt: "Ceremony setup" },
+  { src: wedding4, category: "Receptions", alt: "Reception decor" },
+  { src: wedding5, category: "Details", alt: "Wedding flowers" },
+  { src: wedding, category: "Grounds", alt: "Venue grounds" },
+  { src: wedding1, category: "Ceremonies", alt: "Outdoor ceremony" },
+  { src: wedding2, category: "Receptions", alt: "Indoor reception" },
 ];
 
 export default function WeddingGallery() {
   const [active, setActive] = useState("All");
   const [lightbox, setLightbox] = useState<number | null>(null);
 
-  const filtered = active === "All" ? images : images.filter((img) => img.category === active);
+  const filtered =
+    active === "All" ? images : images.filter((img) => img.category === active);
 
   return (
     <>
       <PageHero
-        image={couplePortrait}
+        image={wedding}
         title="Wedding Gallery"
         subtitle="Moments of beauty, captured forever"
-        breadcrumbs={[{ label: "Home", path: "/" }, { label: "Weddings", path: "/weddings" }, { label: "Gallery" }]}
+        breadcrumbs={[
+          { label: "Home", path: "/" },
+          { label: "Weddings", path: "/weddings" },
+          { label: "Gallery" },
+        ]}
       />
 
       <section className="section-padding">
@@ -45,7 +50,9 @@ export default function WeddingGallery() {
                 key={cat}
                 onClick={() => setActive(cat)}
                 className={`px-5 py-2 text-xs font-sans font-semibold tracking-widest uppercase border transition-all ${
-                  active === cat ? "bg-primary text-primary-foreground border-primary" : "border-border text-foreground hover:border-primary"
+                  active === cat
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "border-border text-foreground hover:border-primary"
                 }`}
               >
                 {cat}
@@ -53,7 +60,10 @@ export default function WeddingGallery() {
             ))}
           </div>
 
-          <motion.div layout className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          <motion.div
+            layout
+            className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
+          >
             <AnimatePresence>
               {filtered.map((img, i) => (
                 <motion.div
@@ -65,7 +75,11 @@ export default function WeddingGallery() {
                   className="overflow-hidden cursor-pointer"
                   onClick={() => setLightbox(i)}
                 >
-                  <img src={img.src} alt={img.alt} className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-700" />
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-700"
+                  />
                 </motion.div>
               ))}
             </AnimatePresence>
