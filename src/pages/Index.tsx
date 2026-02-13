@@ -13,6 +13,7 @@ import homeGallery2 from "@/assets/home_gallery2.jpg";
 import homeGallery3 from "@/assets/home_gallery3.jpg";
 import homeGallery4 from "@/assets/home_gallery4.jpg";
 import homegallery from "@/assets/homegallery.jpg";
+import homeVideo from "@/assets/homevideo.mp4";
 
 const fadeIn = {
   initial: { opacity: 0, y: 40 },
@@ -44,9 +45,12 @@ export default function Index() {
     <>
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src={heroVenue}
-          alt="Valle Vista venue at sunset"
+        <video
+          src={homeVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="hero-overlay absolute inset-0" />
@@ -73,26 +77,46 @@ export default function Index() {
             transition={{ delay: 1, duration: 0.8 }}
             className="gold-divider mx-auto mt-6"
           />
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.3, duration: 0.8 }}
-            className="font-sans text-sm tracking-[0.3em] uppercase mt-6 text-primary-foreground/70"
+            className="mt-6 flex flex-wrap items-center justify-center gap-4 md:gap-6"
           >
-            Weddings · Golf · Events
-          </motion.p>
+            <Link
+              to="/weddings"
+              className="group relative border border-primary-foreground/40 text-primary-foreground px-6 md:px-8 py-2.5 md:py-3 text-xs md:text-sm font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/10 hover:border-primary-foreground/60 transition-all duration-300 backdrop-blur-sm"
+            >
+              <span className="relative z-10">Weddings</span>
+              <span className="absolute inset-0 bg-primary-foreground/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            </Link>
+            <Link
+              to="/golf"
+              className="group relative border border-primary-foreground/40 text-primary-foreground px-6 md:px-8 py-2.5 md:py-3 text-xs md:text-sm font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/10 hover:border-primary-foreground/60 transition-all duration-300 backdrop-blur-sm"
+            >
+              <span className="relative z-10">Golf</span>
+              <span className="absolute inset-0 bg-primary-foreground/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            </Link>
+            <Link
+              to="/events"
+              className="group relative border border-primary-foreground/40 text-primary-foreground px-6 md:px-8 py-2.5 md:py-3 text-xs md:text-sm font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/10 hover:border-primary-foreground/60 transition-all duration-300 backdrop-blur-sm"
+            >
+              <span className="relative z-10">Events</span>
+              <span className="absolute inset-0 bg-primary-foreground/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            </Link>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.6, duration: 0.8 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link
+            {/* <Link
               to="/weddings"
               className="border border-primary-foreground/40 text-primary-foreground px-8 py-3 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/10 transition-all"
             >
               Explore Weddings
-            </Link>
+            </Link> */}
             <Link
               to="/contact"
               className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground px-8 py-3 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/20 transition-all"
