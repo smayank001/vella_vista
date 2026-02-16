@@ -9,6 +9,7 @@ import galleryEvent3 from "@/assets/gallery_event3.jpg";
 import galleryEvent4 from "@/assets/gallery_event4.jpg";
 import galleryGolf from "@/assets/gallery_golf.jpg";
 import wedding from "@/assets/wedding.jpg";
+import weddinggg from "@/assets/maingallery.jpg";
 import wedding1 from "@/assets/wedding1.jpg";
 import wedding2 from "@/assets/wedding2.jpg";
 import wedding3 from "@/assets/wedding3.jpg";
@@ -18,7 +19,7 @@ import wedding5 from "@/assets/wedding5.jpg";
 const categories = ["All", "Weddings", "Golf", "Events", "Special Moments"];
 
 const images = [
-  { src: wedding, category: "Weddings", alt: "Wedding ceremony" },
+  { src: weddinggg, category: "Weddings", alt: "Wedding ceremony" },
   { src: wedding1, category: "Weddings", alt: "Wedding reception" },
   { src: wedding2, category: "Weddings", alt: "Wedding details" },
   { src: wedding3, category: "Weddings", alt: "Ceremony setup" },

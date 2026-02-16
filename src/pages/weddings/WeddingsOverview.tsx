@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageHero from "@/components/layout/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import wedding from "@/assets/wedding.jpg";
+import wedding from "@/assets/wedding_overview.jpg";
+import weddingg from "@/assets/wedding_home.jpg";
 import wedding1 from "@/assets/wedding1.jpg";
 import wedding2 from "@/assets/wedding2.jpg";
 import wedding3 from "@/assets/wedding3.jpg";
@@ -164,7 +165,7 @@ export default function WeddingsOverview() {
             title="Wedding Gallery"
           />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {[wedding, wedding1, wedding2, wedding3, wedding4, wedding5].map(
+            {[weddingg, wedding1, wedding2, wedding3, wedding4, wedding5].map(
               (img, i) => (
                 <motion.div
                   key={i}

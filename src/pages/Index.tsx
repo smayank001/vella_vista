@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
+import homeVideo from "@/assets/homevideo.mp4";
 import heroVenue from "@/assets/hero-venue.jpg";
 import weddingHome from "@/assets/wedding_home.jpg";
+import weddingOverview from "@/assets/weddingoverview.jpg";
 import golfAerial from "@/assets/golf-aerial.jpg";
+import golfHome from "@/assets/golf_home.jpg";
 import eventHome from "@/assets/event_home.jpg";
 import couplePortrait from "@/assets/couple-portrait.jpg";
 import weddingDetails from "@/assets/wedding-details.jpg";
@@ -13,7 +16,7 @@ import homeGallery2 from "@/assets/home_gallery2.jpg";
 import homeGallery3 from "@/assets/home_gallery3.jpg";
 import homeGallery4 from "@/assets/home_gallery4.jpg";
 import homegallery from "@/assets/homegallery.jpg";
-import homeVideo from "@/assets/homevideo.mp4";
+import homegallery1 from "@/assets/homegallery1.jpg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 40 },
@@ -52,9 +55,15 @@ export default function Index() {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+            width: "100%",
+            height: "100%",
+          }}
         />
         <div className="hero-overlay absolute inset-0" />
-        <div className="relative text-center text-primary-foreground px-6">
+        <div className="relative text-center text-primary-foreground px-6 z-10">
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,12 +120,6 @@ export default function Index() {
             transition={{ delay: 1.6, duration: 0.8 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            {/* <Link
-              to="/weddings"
-              className="border border-primary-foreground/40 text-primary-foreground px-8 py-3 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/10 transition-all"
-            >
-              Explore Weddings
-            </Link> */}
             <Link
               to="/contact"
               className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground px-8 py-3 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/20 transition-all"
@@ -155,9 +158,9 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div {...fadeIn}>
               <img
-                src={weddingHome}
+                src={weddingOverview}
                 alt="Romantic outdoor wedding ceremony"
-                className="w-full aspect-[4/3] object-cover"
+                className="w-full aspect-[13/12] object-cover"
               />
             </motion.div>
             <motion.div {...fadeIn} className="lg:pl-4">
@@ -196,7 +199,7 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div {...fadeIn} className="lg:order-2">
               <img
-                src={golfAerial}
+                src={golfHome}
                 alt="Aerial view of Valle Vista golf course"
                 className="w-full aspect-[4/3] object-cover"
               />
@@ -262,7 +265,7 @@ export default function Index() {
             {[
               homeGallery,
               homeGallery1,
-              homeGallery2,
+              homegallery1,
               homeGallery3,
               homeGallery4,
               homegallery,
