@@ -46,91 +46,127 @@ const testimonials = [
 export default function Index() {
   return (
     <>
-      {/* Hero */}
+   
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video
-          src={homeVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{
-            objectFit: "cover",
-            objectPosition: "center",
-            width: "100%",
-            height: "100%",
-          }}
-        />
-        <div className="hero-overlay absolute inset-0" />
-        <div className="relative text-center text-primary-foreground px-6 z-10">
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-editorial text-lg md:text-xl mb-4 text-primary-foreground/80"
+        {/* Background Video with Slow Zoom */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
           >
-            Where every moment becomes a memory
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-wide"
-          >
-            Valle Vista
-          </motion.h1>
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="gold-divider mx-auto mt-6"
-          />
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.3, duration: 0.8 }}
-            className="mt-6 flex flex-wrap items-center justify-center gap-4 md:gap-6"
-          >
-            <Link
-              to="/weddings"
-              className="group relative border border-primary-foreground/40 text-primary-foreground px-6 md:px-8 py-2.5 md:py-3 text-xs md:text-sm font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/10 hover:border-primary-foreground/60 transition-all duration-300 backdrop-blur-sm"
-            >
-              <span className="relative z-10">Weddings</span>
-              <span className="absolute inset-0 bg-primary-foreground/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-            </Link>
-            <Link
-              to="/golf"
-              className="group relative border border-primary-foreground/40 text-primary-foreground px-6 md:px-8 py-2.5 md:py-3 text-xs md:text-sm font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/10 hover:border-primary-foreground/60 transition-all duration-300 backdrop-blur-sm"
-            >
-              <span className="relative z-10">Golf</span>
-              <span className="absolute inset-0 bg-primary-foreground/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-            </Link>
-            <Link
-              to="/events"
-              className="group relative border border-primary-foreground/40 text-primary-foreground px-6 md:px-8 py-2.5 md:py-3 text-xs md:text-sm font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/10 hover:border-primary-foreground/60 transition-all duration-300 backdrop-blur-sm"
-            >
-              <span className="relative z-10">Events</span>
-              <span className="absolute inset-0 bg-primary-foreground/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-            </Link>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.6, duration: 0.8 }}
-            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Link
-              to="/contact"
-              className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground px-8 py-3 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-primary-foreground/20 transition-all"
-            >
-              Schedule a Tour
-            </Link>
-          </motion.div>
+            <source src={homeVideo} type="video/mp4" />
+          </video>
         </div>
+
+        {/* Improved Luxury Overlay */}
+        <div className="absolute inset-0 z-[1] bg-black/30" />
+        <div className="relative text-center text-[#F5F3EE] px-6 z-10 max-w-5xl mx-auto">
+
+  {/* Tagline */}
+  <motion.div
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.5, duration: 1 }}
+    className="mb-6"
+  >
+    <p className="font-serif italic text-xl tracking-[0.08em] text-white/80">
+  Where every moment becomes a luxury
+</p>
+  </motion.div>
+
+  {/* Heading */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.8, duration: 1.2 }}
+    className="relative inline-block mb-8"
+  >
+    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light tracking-wide">
+      Valle Vista
+    </h1>
+
+    <motion.div
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      transition={{ delay: 1.4, duration: 1 }}
+      className="absolute -bottom-3 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#C6A75E] to-transparent"
+    />
+  </motion.div>
+
+  {/* Buttons */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 1.6, duration: 1 }}
+    className="flex flex-wrap justify-center gap-5 mt-10"
+  >
+    {[
+      { label: "Weddings", path: "/weddings" },
+      { label: "Golf", path: "/golf" },
+      { label: "Events", path: "/events" },
+    ].map((item) => (
+      <motion.div
+        key={item.label}
+        whileHover={{ y: -6 }}
+        whileTap={{ scale: 0.97 }}
+      >
+        <Link
+          to={item.path}
+          className="px-7 py-2.5 
+          text-lg 
+          font-serif 
+          bg-black/30 
+          text-[#F5F3EE] 
+          border border-white/15 
+          rounded-[10px] 
+          transition-all duration-400 
+          hover:border-[#C6A75E]/70 
+          hover:bg-black/45"
+        >
+          {item.label}
+        </Link>
+      </motion.div>
+    ))}
+
+    <motion.div
+      whileHover={{ y: -6 }}
+      whileTap={{ scale: 0.97 }}
+    >
+      <Link
+        to="/contact"
+        className="px-7 py-2.5 
+        text-lg 
+        font-serif 
+        bg-[#C6A75E]/15 
+        text-white 
+        border border-[#C6A75E]/60 
+        rounded-[10px] 
+        transition-all duration-400 
+        hover:bg-[#C6A75E]/30"
+      >
+        Schedule a Tour
+      </Link>
+    </motion.div>
+  </motion.div>
+
+</div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3, duration: 1 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-4"
+        >
+          <div className="w-[1px] h-12 bg-gradient-to-b from-gold/50 to-transparent" />
+        </motion.div>
       </section>
 
-      {/* Intro Story */}
+     
       <section className="section-padding">
         <div className="container-editorial">
           <motion.div {...fadeIn} className="max-w-3xl mx-auto text-center">

@@ -15,7 +15,10 @@ export default {
     extend: {
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'serif'],
-        sans: ['"Source Sans 3"', 'sans-serif'],
+        sans: ['"Montserrat"', 'sans-serif'],
+        heading: ['"Cinzel"', 'serif'],
+        playfair: ['"Playfair Display"', 'serif'],
+        script: ['"Pinyon Script"', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
