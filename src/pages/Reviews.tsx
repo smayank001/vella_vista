@@ -3,7 +3,7 @@ import PageHero from "@/components/layout/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import couplePortrait from "@/assets/couple-portrait.jpg";
 
-const testimonials = [
+const reviewsData = [
   { quote: "Valle Vista made our wedding day absolutely magical. The attention to detail was impeccable, and our guests are still talking about the breathtaking setting. It truly exceeded all our expectations.", author: "Sarah & Michael", event: "Wedding, June 2024" },
   { quote: "From the first tour to our reception, the team went above and beyond. The ballroom was stunning, the food was exceptional, and the coordination was seamless. We couldn't have asked for a more perfect day.", author: "Jessica & David", event: "Wedding, September 2024" },
   { quote: "We hosted our corporate retreat at Valle Vista and it was a game-changer. The conference facilities were top-notch, the golf was incredible, and the dinner reception was elegant. Our entire team was impressed.", author: "Robert K.", event: "Corporate Event, October 2024" },
@@ -12,16 +12,16 @@ const testimonials = [
   { quote: "We chose Valle Vista for our daughter's bridal shower and it was perfection. The veranda overlooking the green was the most beautiful setting. The food was divine and the service impeccable.", author: "Linda M.", event: "Bridal Shower, May 2024" },
 ];
 
-export default function Testimonials() {
+export default function Reviews() {
   return (
     <>
-      <PageHero image={couplePortrait} title="Testimonials" subtitle="Stories from those who celebrated with us" breadcrumbs={[{ label: "Home", path: "/" }, { label: "Testimonials" }]} />
+      <PageHero image={couplePortrait} title="Reviews" subtitle="Stories from those who celebrated with us" breadcrumbs={[{ label: "Home", path: "/" }, { label: "Reviews" }]} />
 
       <section className="section-padding">
         <div className="container-editorial">
           <SectionHeading editorial="In their words" title="Guest Experiences" />
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {testimonials.map((t, i) => (
+            {reviewsData.map((t, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}

@@ -25,7 +25,7 @@ const fadeIn = {
   transition: { duration: 0.8 },
 };
 
-const testimonials = [
+const Reviews = [
   {
     quote:
       "Valle Vista made our wedding day absolutely magical. Every detail was perfection.",
@@ -74,7 +74,7 @@ export default function Index() {
     className="mb-6"
   >
     <p className="font-serif italic text-xl tracking-[0.08em] text-white/80">
-  Where every moment becomes a luxury
+  Welcome to Valle Vista
 </p>
   </motion.div>
 
@@ -208,13 +208,13 @@ export default function Index() {
               </h2>
               <div className="gold-divider mb-8" />
               <p className="text-muted-foreground leading-relaxed font-sans mb-4">
-                From intimate garden ceremonies to grand ballroom receptions,
+                From intimate Veranada ceremonies to grand ballroom receptions,
                 Valle Vista offers a range of stunning settings for your
                 celebration. Our dedicated team handles every detail, ensuring
                 your day is as effortless as it is extraordinary.
               </p>
               <p className="text-muted-foreground leading-relaxed font-sans mb-8">
-                All-inclusive packages from $3,500 to $10,000, featuring gourmet
+                All-inclusive packages featuring gourmet
                 chef-prepared meals, personalized planning, and the breathtaking
                 Veranda on the Green.
               </p>
@@ -333,12 +333,12 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Reviews */}
       <section className="section-padding bg-ivory-dark">
         <div className="container-editorial">
-          <SectionHeading editorial="In their words" title="Testimonials" />
+          <SectionHeading editorial="In their words" title="Reviews" />
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {testimonials.map((t, i) => (
+            {Reviews.map((t, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
@@ -359,7 +359,7 @@ export default function Index() {
           </div>
           <div className="text-center mt-12">
             <Link
-              to="/testimonials"
+              to="/Reviews"
               className="inline-block border border-primary text-primary px-8 py-3 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all"
             >
               Read More Stories
@@ -380,7 +380,7 @@ export default function Index() {
             </h2>
             <div className="gold-divider mx-auto mb-8" />
             <p className="text-muted-foreground text-lg leading-relaxed font-sans mb-10">
-              Whether you're envisioning an intimate garden ceremony, a grand
+              Whether you're envisioning an intimate Veranada ceremony, a grand
               ballroom celebration, or a memorable day on the green — we'd love
               to hear from you.
             </p>

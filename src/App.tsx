@@ -22,7 +22,7 @@ import EventsOverview from "./pages/events/EventsOverview";
 import ConferenceCenter from "./pages/events/ConferenceCenter";
 import SocialEvents from "./pages/events/SocialEvents";
 import Gallery from "./pages/Gallery";
-import Testimonials from "./pages/Testimonials";
+import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Privacy from "./pages/Privacy";
@@ -54,7 +54,7 @@ const App = () => (
             <Route path="/events/conference" element={<ConferenceCenter />} />
             <Route path="/events/social" element={<SocialEvents />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/Reviews" element={<Reviews />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />

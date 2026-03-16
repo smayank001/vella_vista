@@ -13,23 +13,19 @@ import couplePortrait from "@/assets/couple-portrait.jpg";
 
 const packages = [
   {
-    name: "The Garden Ceremony",
-    price: "From $3,500",
+    name: "The Veranada Ceremony",
     desc: "An intimate outdoor celebration on the Veranda on the Green with up to 100 guests.",
   },
   {
     name: "The Classic Reception",
-    price: "From $5,500",
     desc: "Elegant indoor reception in our beautifully appointed ballroom for up to 200 guests.",
   },
   {
     name: "The Grand Experience",
-    price: "From $8,000",
     desc: "Our premier all-inclusive package featuring ceremony, cocktail hour, and grand reception.",
   },
   {
     name: "The Estate Collection",
-    price: "From $10,000",
     desc: "Complete estate access with personalized concierge, premium bar, and gourmet dining.",
   },
 ];
@@ -63,7 +59,7 @@ export default function WeddingsOverview() {
             <div className="gold-divider mx-auto mb-8" />
             <p className="text-muted-foreground text-lg leading-relaxed font-sans">
               At Valle Vista, we believe every love story deserves a setting
-              that takes your breath away. From the sun-drenched gardens to our
+              that takes your breath away. From the sun-drenched Veranadas to our
               elegant indoor spaces, every corner of our estate has been
               thoughtfully designed to create moments of pure magic. Our
               dedicated wedding team works closely with you to ensure every
@@ -93,15 +89,15 @@ export default function WeddingsOverview() {
               <div className="gold-divider mb-8" />
               <p className="text-muted-foreground leading-relaxed font-sans mb-4">
                 Exchange vows beneath open skies on our Veranda on the Green,
-                surrounded by manicured gardens and panoramic views. As the sun
+                surrounded by manicured Veranadas and panoramic views. As the sun
                 sets, transition seamlessly to our grand ballroom for an evening
                 of dining, dancing, and celebration.
               </p>
               <ul className="space-y-3 text-muted-foreground font-sans">
                 {[
                   "Indoor & outdoor ceremony options",
-                  "Grand ballroom seating up to 300",
-                  "Cocktail terrace with panoramic views",
+                  "Grand ballroom seating up to 400",
+                  "Complete in house bar services",
                   "Bridal suite & groom's lounge",
                   "On-site gourmet catering",
                 ].map((item) => (
@@ -134,9 +130,6 @@ export default function WeddingsOverview() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="border border-border p-8 md:p-10 hover:border-primary/30 transition-colors"
               >
-                <p className="font-sans text-sm tracking-widest uppercase text-primary mb-2">
-                  {pkg.price}
-                </p>
                 <h3 className="font-serif text-2xl md:text-3xl font-light mb-4">
                   {pkg.name}
                 </h3>

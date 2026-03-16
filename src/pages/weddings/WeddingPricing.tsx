@@ -6,26 +6,22 @@ import { Link } from "react-router-dom";
 
 const pricing = [
   {
-    name: "The Garden Ceremony",
-    price: "$3,500 – $5,000",
+    name: "The Veranada Ceremony",
     guests: "Up to 100 guests",
     includes: ["Outdoor ceremony on the Veranda", "1-hour cocktail reception", "Ceremony coordination", "Sound system & mic", "Chairs & ceremony décor", "Bridal suite access"],
   },
   {
     name: "The Classic Reception",
-    price: "$5,500 – $7,500",
     guests: "Up to 200 guests",
     includes: ["Indoor ballroom reception", "4-hour event window", "Plated or buffet dinner", "Standard bar package", "Tables, linens & centerpieces", "DJ setup & dance floor", "Wedding coordinator"],
   },
   {
     name: "The Grand Experience",
-    price: "$8,000 – $9,500",
     guests: "Up to 250 guests",
     includes: ["Ceremony + cocktail + reception", "5-hour event window", "Premium multi-course dinner", "Premium open bar", "Custom floral arrangements", "Photo opportunities on grounds", "Dedicated planning team"],
   },
   {
     name: "The Estate Collection",
-    price: "$10,000+",
     guests: "Up to 300 guests",
     includes: ["Full estate access", "6-hour event window", "Gourmet chef's tasting menu", "Top-shelf bar package", "Luxury floral design", "Valet parking", "Concierge service", "Late-night snack station"],
   },
@@ -61,7 +57,6 @@ export default function WeddingPricing() {
               >
                 <p className="font-sans text-xs tracking-widest uppercase text-muted-foreground mb-1">{pkg.guests}</p>
                 <h3 className="font-serif text-2xl md:text-3xl font-light mb-2">{pkg.name}</h3>
-                <p className="font-serif text-xl text-primary mb-6">{pkg.price}</p>
                 <div className="gold-divider mb-6" />
                 <ul className="space-y-2.5 text-muted-foreground font-sans text-sm">
                   {pkg.includes.map((item) => (

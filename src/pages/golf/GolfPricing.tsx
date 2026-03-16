@@ -26,7 +26,6 @@ export default function GolfPricing() {
                   {group.items.map((item) => (
                     <li key={item.label} className="flex justify-between font-sans text-sm">
                       <span className="text-muted-foreground">{item.label}</span>
-                      <span className="font-semibold text-foreground">{item.price}</span>
                     </li>
                   ))}
                 </ul>

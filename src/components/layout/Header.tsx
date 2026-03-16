@@ -37,8 +37,8 @@ const navItems = [
     ],
   },
   { label: "Gallery", path: "/gallery" },
-  { label: "Testimonials", path: "/testimonials" },
-  { label: "About", path: "/about" },
+  { label: "Reviews", path: "/Reviews" },
+  // { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -102,7 +102,7 @@ export default function Header() {
                     exit={{ opacity: 0, y: 8 }}
                     className="absolute top-full left-0 pt-2"
                   >
-                    <div className="bg-background/98 backdrop-blur-lg border border-border rounded-sm shadow-lg py-3 min-w-[200px]">
+                    <div className="bg-white backdrop-blur-lg border border-border rounded-sm shadow-lg py-3 min-w-[200px]">
                       {item.children.map((child) => (
                         <Link
                           key={child.path}

@@ -42,7 +42,7 @@ export default function WeddingDetailsPage() {
                 <h3 className="font-serif text-3xl font-light mb-4">The Ceremony</h3>
                 <div className="gold-divider mb-6" />
                 <p className="text-muted-foreground font-sans leading-relaxed mb-4">
-                  Choose from our sun-drenched garden pavilion, the iconic Veranda on the Green, or our 
+                  Choose from our sun-drenched Veranada pavilion, the iconic Veranda on the Green, or our 
                   elegant indoor chapel. Each space is designed to create an intimate atmosphere where your 
                   vows resonate with meaning.
                 </p>

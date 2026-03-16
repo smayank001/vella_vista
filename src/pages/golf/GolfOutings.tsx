@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const packages = [
-  { name: "Corporate Classic", guests: "16–72 golfers", price: "From $75/person", includes: ["18 holes with cart", "Range balls", "Beverage cart", "Boxed lunch", "Scoring & prizes"] },
-  { name: "Premium Outing", guests: "24–144 golfers", price: "From $110/person", includes: ["18 holes with cart", "Range & putting green", "On-course contests", "Buffet lunch & dinner", "Custom scorecards", "Awards ceremony"] },
-  { name: "Charity Tournament", guests: "72–144 golfers", price: "Custom pricing", includes: ["Full event coordination", "Sponsorship signage", "Registration management", "Shotgun start", "Banquet dinner", "Dedicated event planner"] },
+  { name: "Corporate Classic", guests: "16–72 golfers", includes: ["18 holes with cart", "Range balls", "Beverage cart", "Boxed lunch", "Scoring & prizes"] },
+  { name: "Premium Outing", guests: "24–144 golfers", includes: ["18 holes with cart", "Range & putting green", "On-course contests", "Buffet lunch & dinner", "Custom scorecards", "Awards ceremony"] },
+  { name: "Charity Tournament", guests: "72–144 golfers", includes: ["Full event coordination", "Sponsorship signage", "Registration management", "Shotgun start", "Banquet dinner", "Dedicated event planner"] },
 ];
 
 export default function GolfOutings() {
@@ -22,7 +22,6 @@ export default function GolfOutings() {
               <motion.div key={pkg.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }} className="border border-border p-8 hover:border-primary/30 transition-colors">
                 <p className="font-sans text-xs tracking-widest uppercase text-muted-foreground mb-1">{pkg.guests}</p>
                 <h3 className="font-serif text-2xl font-light mb-2">{pkg.name}</h3>
-                <p className="font-serif text-lg text-primary mb-6">{pkg.price}</p>
                 <div className="gold-divider mb-6" />
                 <ul className="space-y-2.5 text-muted-foreground font-sans text-sm">
                   {pkg.includes.map((item) => (

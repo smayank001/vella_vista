@@ -33,7 +33,7 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               {[
                 { label: "About Us", path: "/about" },
-                { label: "Testimonials", path: "/testimonials" },
+                { label: "Reviews", path: "/Reviews" },
                 { label: "Contact", path: "/contact" },
                 { label: "Privacy Policy", path: "/privacy" },
               ].map((link) => (
