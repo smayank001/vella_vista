@@ -69,7 +69,7 @@ export default function Header() {
           <Link to="/" className="relative z-10">
             <h1
               className={`font-serif text-2xl md:text-3xl font-semibold tracking-wide transition-colors duration-500 ${
-                scrolled ? "text-foreground" : "text-primary-foreground"
+                (scrolled || mobileOpen) ? "text-foreground" : "text-primary-foreground"
               }`}
             >
               Valle Vista
@@ -133,7 +133,7 @@ export default function Header() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`lg:hidden relative z-10 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+            className={`lg:hidden relative z-10 ${(scrolled || mobileOpen) ? "text-foreground" : "text-primary-foreground"}`}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -147,7 +147,7 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-background/98 backdrop-blur-lg flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center"
           >
             <nav className="flex flex-col items-center gap-6">
               {navItems.map((item) => (

@@ -46,7 +46,7 @@ const Reviews = [
 export default function Index() {
   return (
     <>
-   
+
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Video with Slow Zoom */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -66,79 +66,79 @@ export default function Index() {
         <div className="absolute inset-0 z-[1] bg-black/30" />
         <div className="relative text-center text-[#F5F3EE] px-6 z-10 max-w-5xl mx-auto">
 
-  {/* Tagline */}
-  <motion.div
-    initial={{ opacity: 0, y: -20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.5, duration: 1 }}
-    className="mb-6"
-  >
-    <p className="font-serif italic text-xl tracking-[0.08em] text-white/80">
-  Welcome to Valle Vista
-</p>
-  </motion.div>
+          {/* Tagline */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="mb-6"
+          >
+            <p className="font-serif italic text-xl tracking-[0.08em] text-white/80">
+              Welcome to Valle Vista
+            </p>
+          </motion.div>
 
-  {/* Heading */}
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.8, duration: 1.2 }}
-    className="relative inline-block mb-8"
-  >
-    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light tracking-wide">
-      Valle Vista
-    </h1>
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 1.2 }}
+            className="relative inline-block mb-8"
+          >
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light tracking-wide">
+              Valle Vista
+            </h1>
 
-    <motion.div
-      initial={{ scaleX: 0 }}
-      animate={{ scaleX: 1 }}
-      transition={{ delay: 1.4, duration: 1 }}
-      className="absolute -bottom-3 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#C6A75E] to-transparent"
-    />
-  </motion.div>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 1.4, duration: 1 }}
+              className="absolute -bottom-3 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#C6A75E] to-transparent"
+            />
+          </motion.div>
 
-  {/* Buttons */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 1.6, duration: 1 }}
-    className="flex flex-wrap justify-center gap-5 mt-10"
-  >
-    {[
-      { label: "Weddings", path: "/weddings" },
-      { label: "Golf", path: "/golf" },
-      { label: "Events", path: "/events" },
-    ].map((item) => (
-      <motion.div
-        key={item.label}
-        whileHover={{ y: -6 }}
-        whileTap={{ scale: 0.97 }}
-      >
-        <Link
-          to={item.path}
-          className="px-7 py-2.5 
+          {/* Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.6, duration: 1 }}
+            className="flex flex-wrap justify-center gap-5 mt-10"
+          >
+            {[
+              { label: "Weddings", path: "/weddings" },
+              { label: "Golf", path: "/golf" },
+              { label: "Events", path: "/events" },
+            ].map((item) => (
+              <motion.div
+                key={item.label}
+                whileHover={{ y: -6 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <Link
+                  to={item.path}
+                  className="px-7 py-2.5 
           text-lg 
           font-serif 
-          bg-black/30 
+          bg-black/50 
           text-[#F5F3EE] 
           border border-white/15 
           rounded-[10px] 
           transition-all duration-400 
           hover:border-[#C6A75E]/70 
-          hover:bg-black/45"
-        >
-          {item.label}
-        </Link>
-      </motion.div>
-    ))}
+          hover:bg-black/60"
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
+            ))}
 
-    <motion.div
-      whileHover={{ y: -6 }}
-      whileTap={{ scale: 0.97 }}
-    >
-      <Link
-        to="/contact"
-        className="px-7 py-2.5 
+            <motion.div
+              whileHover={{ y: -6 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <Link
+                to="/contact"
+                className="px-7 py-2.5 
         text-lg 
         font-serif 
         bg-[#C6A75E]/15 
@@ -147,16 +147,16 @@ export default function Index() {
         rounded-[10px] 
         transition-all duration-400 
         hover:bg-[#C6A75E]/30"
-      >
-        Schedule a Tour
-      </Link>
-    </motion.div>
-  </motion.div>
+              >
+                Schedule a Tour
+              </Link>
+            </motion.div>
+          </motion.div>
 
-</div>
+        </div>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 1 }}
@@ -166,7 +166,7 @@ export default function Index() {
         </motion.div>
       </section>
 
-     
+
       <section className="section-padding">
         <div className="container-editorial">
           <motion.div {...fadeIn} className="max-w-3xl mx-auto text-center">
